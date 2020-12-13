@@ -19,6 +19,10 @@ hummer:
 test:
 	go test ./...
 
+.PHONY: cover
+cover:
+	go test -c -covermode=count -coverpkg ./...
+
 .PHONY: run
 run: hummer
 	./hummer
